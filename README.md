@@ -1,35 +1,45 @@
-# Focus Todo
+# Python To-Do List with Timer
 
-A simple, fully functional browser-based to-do list with a timer for every task.
+A fully functional desktop to-do list built with Python and Tkinter.
 
 ## Features
 
-- Add tasks
-- Edit task names and timer duration
-- Delete individual tasks
-- Mark tasks complete/incomplete
-- Start, pause, and reset a timer for each task
-- Timer continues correctly after page refresh
-- Optional browser notification when a timer finishes
-- Filter by All, Active, and Completed
-- Clear all completed tasks
-- Saves tasks automatically using `localStorage`
-- Responsive design for desktop and mobile
-- No frameworks or dependencies required
+- Add new tasks
+- Give every task its own timer
+- Start, pause, and reset timers
+- Edit task names and timer durations
+- Delete tasks
+- Mark tasks complete or active again
+- Filter tasks by All, Active, or Completed
+- See total, active, and completed task counts
+- Automatic alert when a timer finishes
+- Automatically saves tasks to `tasks.json`
+- Running timers are restored correctly after reopening the program
+- Uses only Python standard-library modules
 
-## Run locally
+## Run the program
 
-1. Download or clone the repository.
-2. Open `index.html` in a browser.
+Make sure Python 3 is installed, then run:
 
-For the best browser notification support, run it using a local web server such as VS Code Live Server.
+```bash
+python todo_app.py
+```
 
-## Project files
+On Windows you can also try:
 
-- `index.html` — page structure
-- `style.css` — layout and design
-- `script.js` — task management, timers, filtering, editing, and local storage
+```bash
+py todo_app.py
+```
 
-## How the timer works
+## Requirements
 
-Each task stores its original duration, remaining time, running state, and start time. If the page is refreshed while a timer is running, the elapsed time is calculated when the page loads so the countdown stays accurate.
+- Python 3
+- Tkinter (included with standard Python installations on Windows and macOS)
+
+No `pip install` is required.
+
+## Main file
+
+`todo_app.py` contains the complete application.
+
+The program creates `tasks.json` automatically when you add a task. That file stores your tasks and timer information so your data is available the next time you open the application.
